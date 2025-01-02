@@ -34,7 +34,7 @@ app.post('/api/register', async (req, res) => {
 
     if (create_error) {
         console.error(create_error.message);
-        return res.status(200).json({ message: "error" })
+        return res.status(200).json({ message: create_error.message })
     }
 
 
