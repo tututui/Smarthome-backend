@@ -32,6 +32,11 @@ app.post('/api/register', async (req, res) => {
         ])
         .select()
 
+    if (create_error) {
+        console.log(create_error);
+        return res.status(200).json({ message: "error" })
+    }
+
 
     return res.status(201).json({ message: "created the account" })
 });
