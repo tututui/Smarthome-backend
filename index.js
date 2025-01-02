@@ -33,7 +33,7 @@ app.post('/api/register', async (req, res) => {
         .select()
 
     if (create_error) {
-        console.log(create_error);
+        console.error(create_error.message);
         return res.status(200).json({ message: "error" })
     }
 
