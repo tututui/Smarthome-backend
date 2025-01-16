@@ -93,6 +93,8 @@ app.post("/api/enable", async (req, res) => {
 app.post("/api/change", async (req, res) => {
     const { id, open } = req.body
 
+    // console.log(id, open)
+
     const { data, error } = await supabase
         .from('devices')
         .update({ open: open })
