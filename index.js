@@ -95,7 +95,7 @@ app.post("/api/change", async (req, res) => {
 
     const { data, error } = await supabase
         .from('devices')
-        .update({ open: !open })
+        .update({ open: open })
         .eq("id", id)
         .select()
 
