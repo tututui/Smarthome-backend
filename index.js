@@ -86,7 +86,7 @@ app.post("/api/enable", async (req, res) => {
         .eq("id", 3)
         .select()
 
-
+    return res.status(200).json({ message: "Create a device successfully" });
 })
 
 
